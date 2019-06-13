@@ -31,6 +31,7 @@ module.exports = function(RED) {
     // node-specific code goes here
     var soap = require("soap");
     var http = require("http");
+    var endpoint = config.endpoint;
     var port = parseInt(config.port);
     if (isNaN(port)) {
       thisNode.error("No port for soap server node!");
